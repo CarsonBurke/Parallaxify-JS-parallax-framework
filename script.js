@@ -11,11 +11,11 @@ function scrolltop() {
     let objectMiddle = document.getElementById("objectMiddle")
     let objectBottom = document.getElementById("objectBottom")
 
-    objectLeft.style.top = pixelsFromTop / 1.2 + "px"
+    objectLeft.style.top = 200 + pixelsFromTop * 0.8 + "px"
 
-    objectRight.style.top = pixelsFromTop / 1.2 + "px"
+    objectRight.style.top = 300 + pixelsFromTop * 0.5 + "px"
 
     objectMiddle.style.transform = "scale(" + transformAmount + ")"
 
-    objectBottom.style.left = pixelsFromTop / 1.5 + "px"
+    objectBottom.style.left = pixelsFromTop * 1.2 + "px"
 }
