@@ -1,6 +1,9 @@
-window.onscroll = function() { scrolltop() };
+window.onscroll = function() {
 
-function scrolltop() {
+    scrollTop()
+}
+
+function scrollTop() {
 
     let pixelsFromTop = document.documentElement.scrollTop
 
