@@ -1,4 +1,6 @@
-window.onscroll = function parallax() {
+window.addEventListener("scroll", parallax)
+
+function parallax() {
 
     let pixelsFromTop = document.documentElement.scrollTop
 
@@ -8,22 +10,30 @@ window.onscroll = function parallax() {
 
         if (!item.dataset.speedMultiplier) {
 
-            item.dataset.speedMultiplier = "0.5"
+            item.dataset.speedMultiplier = "0.7"
         }
         item.style.position = "relative"
 
         item.style.top = pixelsFromTop * item.dataset.speedMultiplier + "px"
     }
 
+
     let imagesToParallax = document.getElementsByClassName("parallaxifyBg")
 
     for (let item of imagesToParallax) {
 
+        function getPosition(item) {
+
+            let top = item.getBoundingClientRect().top
+
+            return top
+        }
+
         if (!item.dataset.speedMultiplier) {
 
-            item.dataset.speedMultiplier = "0.5"
+            item.dataset.speedMultiplier = "0.7"
         }
-        console.log(item)
-        item.style.backgroundPositionY = pixelsFromTop * item.dataset.speedMultiplier + "px"
+
+        item.style.backgroundPositionY = getPosition(item) * -1 * item.dataset.speedMultiplier + "px"
     }
 }
