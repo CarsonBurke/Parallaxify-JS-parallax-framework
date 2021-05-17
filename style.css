@@ -51,7 +51,7 @@ body {
 }
 
 .content {
-    height: 200vh;
+    height: 100vh;
     z-index: 100;
     position: relative;
     background: rgb(240, 240, 240);
