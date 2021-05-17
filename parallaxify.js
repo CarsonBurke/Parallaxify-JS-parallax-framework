@@ -32,7 +32,6 @@ function parallax() {
 
             return top
         }
-        console.log(getPosition(item))
 
         if (!item.dataset.speedMultiplier) {
 
