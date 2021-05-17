@@ -17,32 +17,9 @@ body {
     align-items: center;
     overflow: hidden;
     z-index: 1;
-}
-
-.objectLeft {
-    width: 100px;
-    height: 300px;
-    background-color: rgb(70, 70, 70);
-    box-shadow: rgba(0, 0, 0, 0.15) 0 12px 30px;
-    border-top-right-radius: 100%;
-    border-bottom-right-radius: 100%;
-    position: absolute;
-    left: 0;
-    top: 200px;
-    z-index: 1;
-}
-
-.objectRight {
-    width: 100px;
-    height: 300px;
-    background-color: rgb(70, 70, 70);
-    box-shadow: rgba(0, 0, 0, 0.15) 0 12px 30px;
-    border-top-left-radius: 100%;
-    border-bottom-left-radius: 100%;
-    position: absolute;
-    right: 0;
-    top: 300px;
-    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1532354058425-ba7ccc7e4a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2VicGFnZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
 .objectMiddle {
@@ -52,23 +29,6 @@ body {
     box-shadow: rgba(0, 0, 0, 0.2) 0 12px 30px;
     border-radius: 100%;
     margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-}
-
-.objectBottom {
-    width: 200px;
-    height: 100px;
-    background-color: rgb(70, 70, 70);
-    box-shadow: rgba(0, 0, 0, 0.15) 0 12px 30px;
-    border-top-right-radius: 100px;
-    border-top-left-radius: 100px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
 }
 
 .containerTopper {
