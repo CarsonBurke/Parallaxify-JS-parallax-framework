@@ -12,11 +12,15 @@ function parallax() {
 
             item.dataset.speedMultiplier = "0.7"
         }
-        item.style.position = "relative"
+        if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
-        item.style.top = pixelsFromTop * item.dataset.speedMultiplier + "px"
+
+        } else {
+            item.style.position = "relative"
+
+            item.style.top = pixelsFromTop * item.dataset.speedMultiplier + "px"
+        }
     }
-
 
     let imagesToParallax = document.getElementsByClassName("parallaxifyBg")
 
@@ -33,7 +37,13 @@ function parallax() {
 
             item.dataset.speedMultiplier = "0.7"
         }
+        if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
-        item.style.backgroundPositionY = getPosition(item) * -1 * item.dataset.speedMultiplier + "px"
+            item.style.backgroundAttachment = "fixed"
+        } else {
+
+            item.style.backgroundAttachment = "none"
+            item.style.backgroundPositionY = getPosition(item) * -1 * item.dataset.speedMultiplier + "px"
+        }
     }
 }
