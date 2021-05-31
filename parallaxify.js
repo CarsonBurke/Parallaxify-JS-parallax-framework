@@ -2,7 +2,12 @@ window.addEventListener("scroll", parallax)
 
 function parallax() {
 
-    let pixelsFromTop = document.documentElement.scrollTop
+    function getPosition(item) {
+
+        let top = (item.getBoundingClientRect().top / window.innerHeight * 100).toFixed(0)
+
+        return top
+    }
 
     let itemsToParallax = document.getElementsByClassName("parallaxify")
 
@@ -14,7 +19,7 @@ function parallax() {
         }
         item.style.position = "relative"
 
-        item.style.top = pixelsFromTop * item.dataset.speedMultiplier + "px"
+        item.style.top = getPosition(item) * item.dataset.speedMultiplier + "px"
     }
 
     let imagesToParallax = document.getElementsByClassName("parallaxifyBg")
@@ -23,7 +28,7 @@ function parallax() {
 
         function getPosition(item) {
 
-            let top = (item.getBoundingClientRect().top / window.innerHeight * 100).toFixed(0)
+            let top = (item.getBoundingClientRect().top / window.innerHeight / 2 * 100).toFixed(0)
 
             return top
         }
