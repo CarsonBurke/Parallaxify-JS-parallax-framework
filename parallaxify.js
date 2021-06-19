@@ -28,23 +28,17 @@ function parallax() {
 
         function getPosition(item) {
 
-            let top = (item.getBoundingClientRect().top / window.innerHeight / 2 * 100).toFixed(0) * -1
+            let top = (item.getBoundingClientRect().top / window.innerHeight * 100).toFixed(0)
 
-            if (top > 0) {
-
-                return top
-            } else {
-
-                return 0
-            }
+            return top
         }
 
         if (!item.dataset.speedMultiplier) {
 
-            item.dataset.speedMultiplier = "0.8"
+            item.dataset.speedMultiplier = "3"
         }
 
-        item.style.backgroundAttachment = "none"
+        item.style.backgroundAttachment = "fixed"
         item.style.backgroundPositionY = getPosition(item) * item.dataset.speedMultiplier + "px"
     }
 }
