@@ -30,7 +30,13 @@ function parallax() {
 
             let top = (item.getBoundingClientRect().top / window.innerHeight / 2 * 100).toFixed(0) * -1
 
-            return top
+            if (top > 0) {
+
+                return top
+            } else {
+
+                return 0
+            }
         }
 
         if (!item.dataset.speedMultiplier) {
