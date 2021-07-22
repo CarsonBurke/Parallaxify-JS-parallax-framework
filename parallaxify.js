@@ -5,7 +5,7 @@ function parallax() {
 
     function getPosition(item) {
 
-        let top = (item.getBoundingClientRect().top / window.innerHeight * 100).toFixed(0)
+        let top = (item.getBoundingClientRect().top / window.innerHeight * 100).toFixed(2)
 
         return top
     }
@@ -28,7 +28,7 @@ function parallax() {
 
         function getPosition(item) {
 
-            let top = (item.getBoundingClientRect().top / window.innerHeight * 100).toFixed(0)
+            let top = (item.getBoundingClientRect().top / window.innerHeight * 100).toFixed(2)
 
             return top
         }
