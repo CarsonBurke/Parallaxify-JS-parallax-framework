@@ -19,7 +19,7 @@ function parallax() {
             item.dataset.speedMultiplier = "0.7"
         }
 
-        item.style.transform = "translateY(" + getPosition(item) * item.dataset.speedMultiplier + "px)"
+        item.style.transform = "translate3d(0, " + getPosition(item) * item.dataset.speedMultiplier + "px, 0)"
     }
 
     let imagesToParallax = document.getElementsByClassName("parallaxifyBg")
