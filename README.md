@@ -1,2 +1,3 @@
 # Parallax
- Custom parallax scrolling
+Simple and customizable parallax scrolling for your websites. 
+Documentation coming soon.
